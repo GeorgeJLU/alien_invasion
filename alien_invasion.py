@@ -41,7 +41,7 @@ class AlienInvasion:
                 self._check_keydown_events(event)
 
             elif event.type == pygame.KEYUP:
-                self._check_up_events(event)
+                self._check_keyup_events(event)
 
     def _check_keydown_events(self, event):
         """响应按下按键"""
@@ -54,7 +54,7 @@ class AlienInvasion:
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
 
-    def _check_up_events(self, event):
+    def _check_keyup_events(self, event):
         """响应松开按键"""
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = False
